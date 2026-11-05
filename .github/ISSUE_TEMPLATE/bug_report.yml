@@ -1,0 +1,33 @@
+name: Bug report
+description: Something is not working as documented
+labels: [bug]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what did you see instead?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Commands, the artifact or spec used, and the tenant. Remove any secrets.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      description: OS, Node version, Playwright/Chromium version
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or trace output
+      description: Relevant `trace.jsonl` lines or console output. Redact anything sensitive.
+      render: shell
